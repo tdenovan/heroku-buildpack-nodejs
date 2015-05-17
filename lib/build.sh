@@ -41,11 +41,11 @@ get_start_method() {
 
 get_modules_source() {
   local build_dir=$1
-  if test -d $build_dir/node_modules; then
+  if test -d $build_dir/programs/server/node_modules; then
     echo "prebuilt"
-  elif test -f $build_dir/npm-shrinkwrap.json; then
+  elif test -f $build_dir/programs/server/npm-shrinkwrap.json; then
     echo "npm-shrinkwrap.json"
-  elif test -f $build_dir/package.json; then
+  elif test -f $build_dir/programs/server/package.json; then
     echo "package.json"
   else
     echo ""
