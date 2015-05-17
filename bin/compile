@@ -54,8 +54,9 @@ install_npm
 ####### Build the project's dependencies
 
 head "Building dependencies"
-cd $build_dir
+cd $build_dir/programs/server
 build_dependencies
+cd $build_dir
 
 ####### Create a Procfile if possible
 
